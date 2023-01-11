@@ -1,6 +1,6 @@
 
 
-class SerializeYAML:
+class SerializeTEXT:
 
     @staticmethod
     def convert(input_data: str):

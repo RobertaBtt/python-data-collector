@@ -1,5 +1,5 @@
 from . import SerializeJSON
-from . import SerializeYAML
+from . import SerializeTEXT
 from . import SerializeXML
 
 # This class is the Abstract Factory for the serializer,
@@ -15,9 +15,9 @@ SERIALIZERS_DICT = dict()
 
 def register():
     """Register a Service Class that can adapt to different data sources"""
-    SERIALIZERS_DICT["JSON"] = SerializeJSON.SerializeJSON
-    SERIALIZERS_DICT["XML"] = SerializeXML.SerializeXML
-    SERIALIZERS_DICT["YAML"] = SerializeYAML.SerializeYAML
+    SERIALIZERS_DICT["application/json"] = SerializeJSON.SerializeJSON
+    SERIALIZERS_DICT["application/xml"] = SerializeXML.SerializeXML
+    SERIALIZERS_DICT["text/plain"] = SerializeTEXT.SerializeTEXT
 
 
 class SerializeFactory:

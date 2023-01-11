@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 from app.DependencyContainer import DependencyContainer
 from app.serialize.SerializeJSON import SerializeJSON
-from jsonschema.exceptions import ValidationError
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -109,13 +108,8 @@ class TestSerialize(unittest.TestCase):
     def setUp(self):
         super().setUp()
         self.app = DependencyContainer()
-        self.config = self.app.config_env()
-        self.current_format = self.config.get("INPUT_FORMAT")
+        self.current_format = "application/json"
         self.serializer = self.app.serialize_factory().get_serializer(self.current_format)
-
-    def test_get_current_serializer(self):
-        current_format = self.config.get("INPUT_FORMAT")
-        self.assertEqual(current_format, "JSON")
 
     def test_instance_serializer(self):
 
@@ -134,8 +128,7 @@ class TestSerialize(unittest.TestCase):
         self.assertEqual("<class 'dict'>", str(type(result['transaction_fields'])))
 
     def test_serialize_json_string(self):
-        current_format = self.config.get("INPUT_FORMAT")
-        serializer = self.app.serialize_factory().get_serializer(current_format)
+        serializer = self.app.serialize_factory().get_serializer(self.current_format)
 
         result = serializer.deserialize_string(valid_json_string)
 
