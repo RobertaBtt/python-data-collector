@@ -1,4 +1,6 @@
 import json
+from jsonschema import validate
+from app.serialize.SchemaJSON import schema
 
 
 class SerializeJSON:
@@ -17,11 +19,30 @@ class SerializeJSON:
     def deserialize_string(content: str) -> dict:
 
         try:
+            # parse JSON from a string
             json_data = json.loads(content)
             return json_data
         except Exception as ex:
             raise ex
 
     @staticmethod
-    def from_str_to_list(input_str):
-        return input_str.strip('][').replace("'", "").split(', ')
+    def validate_json_file(str_path_file: str) -> bool:
+        try:
+            json_data = SerializeJSON.deserialize_file(str_path_file)
+            result_validation = validate(instance=json_data, schema=schema)
+
+            return result_validation
+        except Exception as ex:
+            raise ex
+        pass
+
+    @staticmethod
+    def validate_json_string(content: str) -> bool:
+        try:
+            json_data = SerializeJSON.deserialize_string(content)
+            result_validation = validate(instance=json_data, schema=schema)
+
+            return result_validation
+        except Exception as ex:
+            raise ex
+        pass
