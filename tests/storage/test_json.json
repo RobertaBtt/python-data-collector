@@ -1,0 +1,118 @@
+{
+  "job_latitude":"37.3333333333",
+  "fleet_email":"JoehRichmondAndAssociate@example.com",
+  "job_id":"236365",
+  "job_state":"Successful",
+  "has_delivery":"1",
+  "job_pickup_latitude":"30.2222222222",
+  "job_pickup_name":"Jon Richmond Peppy",
+  "job_status":"2",
+  "sign_image":"https://flolaLux.net",
+  "customer_username":"username",
+  "job_longitude":"-122.0000000000",
+  "job_pickup_longitude":"-122.0000000",
+  "total_distance_travelled":"0",
+  "total_time_spent_at_task_till_completion":"15",
+  "has_pickup":"1",
+  "job_token":"304958304958304958",
+  "job_pickup_address":"5849 Gjfo JFOMSM Avenue",
+  "job_pickup_phone":"+43574830485",
+  "fleet_id":"3635",
+  "fleet_name":"Postino",
+  "job_pickup_email":"test@email.com",
+  "task_history":[
+    {
+      "id":235973,
+      "job_id":85185,
+      "fleet_id":3829,
+      "fleet_name":"bobby singh",
+      "latitude":"30.7192552",
+      "longitude":"76.8102558",
+      "type":"state_changed",
+      "description":"Status updated from Assigned to Unassigned",
+      "creation_datetime":"2016-01-11T09:34:17.000Z"
+    },
+    {
+      "id":236365,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Peppy B",
+      "latitude":"30.7193512",
+      "longitude":"76.8102679",
+      "type":"state_changed",
+      "description":"Accepted at",
+      "creation_datetime":"2016-01-11T12:11:02.000Z"
+    },
+    {
+      "id":236366,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Peppy B",
+      "latitude":"30.7193512",
+      "longitude":"76.8102679",
+      "type":"state_changed",
+      "description":"Started at",
+      "creation_datetime":"2016-01-11T12:11:04.000Z"
+    },
+    {
+      "id":236367,
+      "job_id":999999,
+      "fleet_id":777777,
+      "fleet_name":"Peppy B",
+      "latitude":"30.7195829",
+      "longitude":"76.8101409",
+      "type":"state_changed",
+      "description":"Arrived at",
+      "creation_datetime":"2016-01-11T12:11:07.000Z"
+    },
+    {
+      "id":236376,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Peppy B",
+      "latitude":"30.7183782",
+      "longitude":"76.8096116",
+      "type":"text_added",
+      "description":"vcvvvv",
+      "creation_datetime":"2016-01-11T12:13:14.000Z"
+    },
+    {
+      "id":236377,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Peppy B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"image_added",
+      "description":"https://tookan.s3.amazonaws.com/acknowledgement_images/werwerwerewrwerwerwerwer.jpg",
+      "creation_datetime":"2016-01-11T12:13:27.000Z"
+    },
+    {
+      "id":236378,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Peppy B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"signature_image_added",
+      "description":"https://tookan.s3.amazonaws.com/acknowledgement_images/sdfdsfdsfsdfdsfdsfdsf.png",
+      "creation_datetime":"2016-01-11T12:13:36.000Z"
+    },
+    {
+      "id":236379,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Peppy B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"state_changed",
+      "description":"Successful at",
+      "creation_datetime":"2016-01-11T12:13:42.000Z"
+    }
+  ],
+  "transaction_fields": {
+    "fare_amount": 456.78,
+    "driver_amount": 123.45,
+    "added_fees": 0
+  }
+}

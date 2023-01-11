@@ -1,0 +1,5 @@
+dependency-injector==4.41.0
+pytest==7.2.0
+flask==2.2.0
+python-dotenv==0.21.0
+pycryptodome==3.15.0
