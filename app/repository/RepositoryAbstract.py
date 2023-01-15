@@ -4,7 +4,7 @@ from abc import abstractmethod, ABC
 class RepositoryAbstract(ABC):
 
     @abstractmethod
-    def create(self):
+    def create(self, query:str):
         raise NotImplementedError
 
     @abstractmethod

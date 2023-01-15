@@ -3,8 +3,8 @@ from dependency_injector.providers import Singleton
 from app.configuration.ConfigurationCONF import ConfigurationCONF
 from app.configuration.ConfigurationENV import ConfigurationENV
 from app.connection.ConnectionSQLite import ConnectionSQLite
-from app.repository.RepositoryMusic import RepositoryMusic
-from app.service.ServiceMusic import ServiceMusic
+from app.repository.RepositoryBreaze import RepositoryBreaze
+from app.service.ServiceBreaze import ServiceBreaze
 from app.service.ServiceSecurity import ServiceSecurity
 from app.serialize.SerializeFactory import SerializeFactory
 from app.log.LogLocal import LogLocal
@@ -20,12 +20,12 @@ class DependencyContainer(DeclarativeContainer):
 
     connection = Singleton(ConnectionSQLite, config_conf, "CONNECTION_SQLITE")
 
-    music_repository = Singleton(RepositoryMusic, connection)
+    repository_breaze = Singleton(RepositoryBreaze, connection)
 
     serialize_factory = Singleton(SerializeFactory)
 
     # Frontend services
-    service_music = Singleton(ServiceMusic, config_conf, music_repository)
+    service_breaze = Singleton(ServiceBreaze, config_conf, repository_breaze)
 
     # Backend services
     service_security = Singleton(ServiceSecurity, log_local)

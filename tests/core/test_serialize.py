@@ -167,6 +167,13 @@ class TestSerialize(unittest.TestCase):
         except Exception as exc:
             assert True, exc
 
+    def test_extract_correct_data(self):
+        json_file = os.path.join(str(BASE_DIR) + '/storage/real_json.json')
+        result = self.serializer.deserialize_file(json_file)
+        transaction_data = self.serializer.extract_transaction_data(result)
+
+        self.assertEqual(transaction_data['job_id'], 236365)
+
 
 if __name__ == '__main__':
     unittest.main()

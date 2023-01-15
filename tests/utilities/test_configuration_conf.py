@@ -10,9 +10,9 @@ class TestConfigurationCONF(unittest.TestCase):
 
     def test_get_configuration_CONF(self):
         app_name = self.config.get("APP", "name")
-        static_path = self.config.get("STATIC", "path")
+        static_path = self.config.get("STORAGE", "path")
         self.assertEqual(app_name, "Adaptive Python Service")
-        self.assertEqual(static_path, "static")
+        self.assertEqual(static_path, "storage")
 
 
 if __name__ == '__main__':

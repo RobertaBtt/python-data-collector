@@ -20,7 +20,7 @@
   "fleet_id":"3635",
   "fleet_name":"Postino",
   "job_pickup_email":"test@email.com",
-  "task_history":[
+    "task_history":[
     {
       "id":235973,
       "job_id":85185,
@@ -42,6 +42,28 @@
       "type":"state_changed",
       "description":"Accepted at",
       "creation_datetime":"2016-01-11T12:11:02.000Z"
+    },
+    {
+      "id":236378,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"signature_image_added",
+      "description":"https://tookan.s3.amazonaws.com/acknowledgement_images/srA51452514416346-task_signature.png",
+      "creation_datetime":"2016-01-11T12:13:36.000Z"
+    },
+    {
+      "id":236379,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"state_changed",
+      "description":"Successful at",
+      "creation_datetime":"2016-01-11T12:13:42.000Z"
     }
   ],
   "transaction_fields": {

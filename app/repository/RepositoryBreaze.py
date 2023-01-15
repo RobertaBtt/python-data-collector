@@ -2,13 +2,18 @@ from app.repository.RepositoryAbstract import RepositoryAbstract
 from app.connection.ConnectionAbstract import ConnectionAbstract
 
 
-class RepositoryMusic(RepositoryAbstract):
+class RepositoryBreaze(RepositoryAbstract):
 
     def __init__(self, connection: ConnectionAbstract):
         self.sql = connection
 
-    def create(self):
-        pass
+    def create(self, query: str):
+        try:
+            with self.sql.get_connection() as connection:
+                cursor = connection.cursor()
+                cursor.execute(query)
+        except Exception as ex:
+            raise Exception(f'Error on creating table or inserting values with this query: ') + query
 
     def read_with_headers(self, query: str):
         with self.sql.get_connection() as connection:

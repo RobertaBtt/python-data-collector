@@ -1,0 +1,118 @@
+{
+  "job_latitude":"37.7913917",
+  "fleet_email":"JonSnow@example.com",
+  "job_id":"236365",
+  "job_state":"Successful",
+  "has_delivery":"1",
+  "job_pickup_latitude":"30.7397101",
+  "job_pickup_name":"Jon Snow",
+  "job_status":"2",
+  "sign_image":"https://breaze.co.za",
+  "customer_username":"sesas",
+  "job_longitude":"-122.4008504",
+  "job_pickup_longitude":"-122.4008504",
+  "total_distance_travelled":"0",
+  "total_time_spent_at_task_till_completion":"15",
+  "has_pickup":"1",
+  "job_token":"cd7dd3e12424de76141787af773782c9100",
+  "job_pickup_address":"205A Jan Smuts Ave, johannesburg",
+  "job_pickup_phone":"+2712345678",
+  "fleet_id":"3635",
+  "fleet_name":"Mike Driver",
+  "job_pickup_email":"sumeet@email.com",
+  "task_history":[
+    {
+      "id":235973,
+      "job_id":85185,
+      "fleet_id":3829,
+      "fleet_name":"bobby singh",
+      "latitude":"30.7192552",
+      "longitude":"76.8102558",
+      "type":"state_changed",
+      "description":"Status updated from Assigned to Unassigned",
+      "creation_datetime":"2016-01-11T09:34:17.000Z"
+    },
+    {
+      "id":236365,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7193512",
+      "longitude":"76.8102679",
+      "type":"state_changed",
+      "description":"Accepted at",
+      "creation_datetime":"2016-01-11T12:11:02.000Z"
+    },
+    {
+      "id":236366,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7193512",
+      "longitude":"76.8102679",
+      "type":"state_changed",
+      "description":"Started at",
+      "creation_datetime":"2016-01-11T12:11:04.000Z"
+    },
+    {
+      "id":236367,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7195829",
+      "longitude":"76.8101409",
+      "type":"state_changed",
+      "description":"Arrived at",
+      "creation_datetime":"2016-01-11T12:11:07.000Z"
+    },
+    {
+      "id":236376,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7183782",
+      "longitude":"76.8096116",
+      "type":"text_added",
+      "description":"vcvvvv",
+      "creation_datetime":"2016-01-11T12:13:14.000Z"
+    },
+    {
+      "id":236377,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"image_added",
+      "description":"https://tookan.s3.amazonaws.com/acknowledgement_images/JhTU1452514406350-TOOKAN_11012016_054030.jpg",
+      "creation_datetime":"2016-01-11T12:13:27.000Z"
+    },
+    {
+      "id":236378,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"signature_image_added",
+      "description":"https://tookan.s3.amazonaws.com/acknowledgement_images/srA51452514416346-task_signature.png",
+      "creation_datetime":"2016-01-11T12:13:36.000Z"
+    },
+    {
+      "id":236379,
+      "job_id":85185,
+      "fleet_id":3635,
+      "fleet_name":"Rusty B",
+      "latitude":"30.7194513",
+      "longitude":"76.8103432",
+      "type":"state_changed",
+      "description":"Successful at",
+      "creation_datetime":"2016-01-11T12:13:42.000Z"
+    }
+  ],
+  "transaction_fields": {
+    "fare_amount": 311.61,
+    "driver_amount": 255.67,
+    "added_fees": 0
+  }
+}
