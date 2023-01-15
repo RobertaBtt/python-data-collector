@@ -97,77 +97,32 @@ With **Postman**:
 `
 
 
-### This service needs a RabbitMQ container.
 
+### When a delivery should be saved? ###
 
-`docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management`
+Wnere it's state is successfull, has_delivery = 1
 
+these are the fields saved 
 
+![table.png](static%2Ftable.png)
 
-### When a delivery is successful? ###
 
 Those are the fields to take in consideration for computing a successful ride,
 that has transactions of money and make the business sustainable.
 
-id	-> auto generated
-UUID -> created ex-novo during the creation
-driver_name	String -> fleet_name from task history
-amount_total	decimal = driver_amount + fare_amount + added_fees
-amount_driver	decimal -> from driver_amount
-timestamp	Timestamp -> from the first task history item.
-distance	decimal -> total_distance_travelled ***
-time_spent	decimal -> total_time_spent_at_task_till_completion
 
+We do not save the latitude and longitude 
 
-** do we need these fields ?
 - latitude_start	String -> from the first task history
 - longitude_start	String
 - latitude_end	String -> from the last task history item
 - longitude_end	String
-- 
-*** since the distance is not just the distance from point A (pickup) and point B, 
+
+because the distance is not just the distance from point A (pickup) and point B, 
 we can't calculate it with the latitude and longitude provided because 
 we don't know the effective street that was taken.
 
-So we take the total_distance_travelled 
-
-"transaction_fields": {
-    "fare_amount": 311.61,
-    "driver_amount": 255.67,
-    "added_fees": 0 
+So we take the **total_distance_travelled** and the time_spent from the main block.
 
 
-"job_id":"236365"
-
-
-  "job_state":"Successful",
-  "has_delivery":"1",
-
-  "job_pickup_latitude":"30.7397101",
-  "job_pickup_longitude":"-122.4008504",
-  "total_distance_travelled":"0",
-  "total_time_spent_at_task_till_completion":"15",
-  "has_pickup":"1",
-  "fleet_id":"3635",
-
-We can only take the task history where the fleet id coincide with the one in the main array
-
- 
-  "task_history":[
-    {
-      "id":235973,
-      "job_id":85185,
-      "fleet_id":3829,
-      "fleet_name":"bobby singh",
-      "latitude":"30.7192552",
-      "longitude":"76.8102558",
-      "type":"state_changed",
-      "description":"Status updated from Assigned to Unassigned",
-      "creation_datetime":"2016-01-11T09:34:17.000Z"
-    },
-
-  "transaction_fields": {
-    "fare_amount": 311.61,
-    "driver_amount": 255.67,
-    "added_fees": 0 
   
